@@ -73,13 +73,6 @@ router.get('/:id/history', auth, authorize('patient', 'doctor', 'admin'), async 
       return res.status(404).json({ message: 'Patient not found' });
     }
 
-    // Check authorization
-    if (req.user._id.toString() !== req.params.id && 
-        req.user.role !== 'doctor' && 
-        req.user.role !== 'admin') {
-      return res.status(403).json({ message: 'Not authorized to view this information' });
-    }
-
     res.json(patient);
   } catch (error) {
     console.error(error);
