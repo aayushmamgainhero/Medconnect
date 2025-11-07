@@ -154,12 +154,25 @@ This project is licensed under the MIT License.
 
 ## Compliance Note
 
-This application is designed for educational purposes. For production use in healthcare:
+⚠️ **Important**: This application is designed for educational and development purposes. 
+
+**This is NOT production-ready** without additional security hardening. Before deploying to production:
+
+- Review and implement all items in [SECURITY.md](SECURITY.md)
+- Implement rate limiting on all endpoints
+- Add comprehensive input validation and sanitization
+- Set up proper audit logging
+- Configure HTTPS/TLS encryption
+- Conduct security audit and penetration testing
+
+For production use in healthcare:
 - Ensure HIPAA compliance (US) or equivalent regulations in your region
 - Implement proper data encryption at rest and in transit
 - Regular security audits
 - Proper access controls and audit logging
 - Patient data privacy protections
+
+See [SECURITY.md](SECURITY.md) for detailed security considerations and production checklist.
 
 ## Support
 
